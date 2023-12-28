@@ -10,9 +10,6 @@ function App() {
         <DataProvider>
           <Home/>
         </DataProvider>
-          
-        
-    
   );
 }
 

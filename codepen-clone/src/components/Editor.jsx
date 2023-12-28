@@ -32,11 +32,11 @@ const Header = styled(Box)`
     justify:space-between;
     font-weight :700;
 `
-const Editor = ({heading,icon,color,value,onChange}) =>
-{
-    const [open,setOpen]=useState(true)
+const Editor = ({heading,icon,color,value,onChange}) =>{
+    
+    const [open,setOpen]=useState(true);
     const handleChange=(editor, date, value)=>{
-           onChange(value)
+           onChange(value);
     }
 
     return (
@@ -54,7 +54,6 @@ const Editor = ({heading,icon,color,value,onChange}) =>
                             marginRight:5,
                             paddingBottom :2,
                             color:'#000'
-
                         }}
                     > {icon}
                     </Box>
@@ -63,7 +62,7 @@ const Editor = ({heading,icon,color,value,onChange}) =>
                 <CloseFullscreenIcon
                     fontSize='small'
                     style={{position:'right', alignSelf:'center'}}
-                    onClick={()=>setOpen=>(prevState=>!prevState)}
+                    onClick={()=>setOpen(prevState=>!prevState)}
                 />
             </Header>
             <CodeMirror
@@ -76,7 +75,7 @@ const Editor = ({heading,icon,color,value,onChange}) =>
                 }}
             />
 
-            </Container>
+        </Container>
         
     )
 }
