@@ -29,7 +29,7 @@ const Header = styled(Box)`
     display:flex;
     background:#060606;
     color:#aaaebc;
-    justify:space-between;
+    justify-content :space-between;
     font-weight :700;
 `
 const Editor = ({heading,icon,color,value,onChange}) =>{
@@ -64,7 +64,7 @@ const Editor = ({heading,icon,color,value,onChange}) =>{
                     style={{position:'right', alignSelf:'center'}}
                     onClick={()=>setOpen(prevState=>!prevState)}
                 />
-            </Header>
+            </Header> 
             <CodeMirror
                 className='controlled-editor'
                 value ={value}
